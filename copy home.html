@@ -919,12 +919,14 @@
           })
           .then(data => {
 
+            console.log(data.data)
+
             const list1 = document.getElementById("list1")
 
             for (let i=0; i<data.lenght; i++){
               const listItem = document.createElement("li")
               listItem.classList.add("listItems1")
-              listItem.innerText = data[i].data.title
+              listItem.innerText = data[i].title
               list1.appendChild(listItem)
             }
           })
